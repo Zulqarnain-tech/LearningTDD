@@ -8,6 +8,8 @@
 import Foundation
 
 public struct Movie{
+    
+    // Mark: - Properties
     private let title: String
     private let releaseDate: String?
     
@@ -17,7 +19,7 @@ public struct Movie{
     public var getReleaseDate: String{
         get{ self.releaseDate ?? ""}
     }
-
+    
     public init(title: String, releaseDate: String? = nil){
         self.title = title
         self.releaseDate = releaseDate

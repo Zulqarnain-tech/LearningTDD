@@ -6,7 +6,7 @@
 //
 
 import XCTest
-
+import TDDPractice
 class MovieManagerTests: XCTestCase {
 
     override func setUpWithError() throws {
@@ -24,12 +24,9 @@ class MovieManagerTests: XCTestCase {
     }
     private func moviesToSeeAndSeenSUT() -> (toSeeMoviesCount: Int, seenMoviesCount: Int){
         let sut = MovieManager()
-        let toSeeMoviesCount = sut.moviesToSeeCount
-        let seenMoviesCount = sut.seenMoviesCount
+        let toSeeMoviesCount = sut.movieToSeeCount
+        let seenMoviesCount = sut.movieSeenCount
         return (toSeeMoviesCount, seenMoviesCount)
     }
 }
-class MovieManager{
-    let moviesToSeeCount: Int = 0
-    let seenMoviesCount: Int = 0
-}
+
