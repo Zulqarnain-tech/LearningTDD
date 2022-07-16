@@ -13,7 +13,20 @@
 		77482F072881ED4500082BEB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 77482F052881ED4500082BEB /* Main.storyboard */; };
 		77482F092881ED4600082BEB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 77482F082881ED4600082BEB /* Assets.xcassets */; };
 		77482F0C2881ED4600082BEB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 77482F0A2881ED4600082BEB /* LaunchScreen.storyboard */; };
+		77482F1A2881F51300082BEB /* MovieStructTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77482F192881F51300082BEB /* MovieStructTests.swift */; };
+		77482F22288296A500082BEB /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77482F21288296A500082BEB /* Movie.swift */; };
+		77A82E672882EBAD0053B39D /* MovieManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77A82E662882EBAD0053B39D /* MovieManagerTests.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		77482F1B2881F51300082BEB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 77482EF42881ED4500082BEB /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 77482EFB2881ED4500082BEB;
+			remoteInfo = TDDPractice;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		77482EFC2881ED4500082BEB /* TDDPractice.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TDDPractice.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -24,10 +37,21 @@
 		77482F082881ED4600082BEB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		77482F0B2881ED4600082BEB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		77482F0D2881ED4600082BEB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		77482F172881F51300082BEB /* TDDPracticeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TDDPracticeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		77482F192881F51300082BEB /* MovieStructTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieStructTests.swift; sourceTree = "<group>"; };
+		77482F21288296A500082BEB /* Movie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
+		77A82E662882EBAD0053B39D /* MovieManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieManagerTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		77482EF92881ED4500082BEB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		77482F142881F51300082BEB /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -41,6 +65,7 @@
 			isa = PBXGroup;
 			children = (
 				77482EFE2881ED4500082BEB /* TDDPractice */,
+				77482F182881F51300082BEB /* TDDPracticeTests */,
 				77482EFD2881ED4500082BEB /* Products */,
 			);
 			sourceTree = "<group>";
@@ -49,6 +74,7 @@
 			isa = PBXGroup;
 			children = (
 				77482EFC2881ED4500082BEB /* TDDPractice.app */,
+				77482F172881F51300082BEB /* TDDPracticeTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -56,15 +82,57 @@
 		77482EFE2881ED4500082BEB /* TDDPractice */ = {
 			isa = PBXGroup;
 			children = (
+				77482F2328829E4700082BEB /* Controller */,
+				77482F202882969B00082BEB /* Model */,
 				77482EFF2881ED4500082BEB /* AppDelegate.swift */,
 				77482F012881ED4500082BEB /* SceneDelegate.swift */,
-				77482F032881ED4500082BEB /* ViewController.swift */,
 				77482F052881ED4500082BEB /* Main.storyboard */,
 				77482F082881ED4600082BEB /* Assets.xcassets */,
 				77482F0A2881ED4600082BEB /* LaunchScreen.storyboard */,
 				77482F0D2881ED4600082BEB /* Info.plist */,
 			);
 			path = TDDPractice;
+			sourceTree = "<group>";
+		};
+		77482F182881F51300082BEB /* TDDPracticeTests */ = {
+			isa = PBXGroup;
+			children = (
+				77482F252882A6D600082BEB /* Test Controllers */,
+				77482F242882A2B900082BEB /* Test Models */,
+			);
+			path = TDDPracticeTests;
+			sourceTree = "<group>";
+		};
+		77482F202882969B00082BEB /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				77482F21288296A500082BEB /* Movie.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		77482F2328829E4700082BEB /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				77482F032881ED4500082BEB /* ViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		77482F242882A2B900082BEB /* Test Models */ = {
+			isa = PBXGroup;
+			children = (
+				77482F192881F51300082BEB /* MovieStructTests.swift */,
+				77A82E662882EBAD0053B39D /* MovieManagerTests.swift */,
+			);
+			path = "Test Models";
+			sourceTree = "<group>";
+		};
+		77482F252882A6D600082BEB /* Test Controllers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Test Controllers";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -87,6 +155,24 @@
 			productReference = 77482EFC2881ED4500082BEB /* TDDPractice.app */;
 			productType = "com.apple.product-type.application";
 		};
+		77482F162881F51300082BEB /* TDDPracticeTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 77482F1D2881F51300082BEB /* Build configuration list for PBXNativeTarget "TDDPracticeTests" */;
+			buildPhases = (
+				77482F132881F51300082BEB /* Sources */,
+				77482F142881F51300082BEB /* Frameworks */,
+				77482F152881F51300082BEB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				77482F1C2881F51300082BEB /* PBXTargetDependency */,
+			);
+			name = TDDPracticeTests;
+			productName = TDDPracticeTests;
+			productReference = 77482F172881F51300082BEB /* TDDPracticeTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -99,6 +185,10 @@
 				TargetAttributes = {
 					77482EFB2881ED4500082BEB = {
 						CreatedOnToolsVersion = 13.4;
+					};
+					77482F162881F51300082BEB = {
+						CreatedOnToolsVersion = 13.4;
+						TestTargetID = 77482EFB2881ED4500082BEB;
 					};
 				};
 			};
@@ -116,6 +206,7 @@
 			projectRoot = "";
 			targets = (
 				77482EFB2881ED4500082BEB /* TDDPractice */,
+				77482F162881F51300082BEB /* TDDPracticeTests */,
 			);
 		};
 /* End PBXProject section */
@@ -131,6 +222,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		77482F152881F51300082BEB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -140,11 +238,29 @@
 			files = (
 				77482F042881ED4500082BEB /* ViewController.swift in Sources */,
 				77482F002881ED4500082BEB /* AppDelegate.swift in Sources */,
+				77482F22288296A500082BEB /* Movie.swift in Sources */,
 				77482F022881ED4500082BEB /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		77482F132881F51300082BEB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				77A82E672882EBAD0053B39D /* MovieManagerTests.swift in Sources */,
+				77482F1A2881F51300082BEB /* MovieStructTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		77482F1C2881F51300082BEB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 77482EFB2881ED4500082BEB /* TDDPractice */;
+			targetProxy = 77482F1B2881F51300082BEB /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		77482F052881ED4500082BEB /* Main.storyboard */ = {
@@ -334,6 +450,40 @@
 			};
 			name = Release;
 		};
+		77482F1E2881F51300082BEB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = NAN.TDDPracticeTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TDDPractice.app/TDDPractice";
+			};
+			name = Debug;
+		};
+		77482F1F2881F51300082BEB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = NAN.TDDPracticeTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TDDPractice.app/TDDPractice";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -351,6 +501,15 @@
 			buildConfigurations = (
 				77482F112881ED4600082BEB /* Debug */,
 				77482F122881ED4600082BEB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		77482F1D2881F51300082BEB /* Build configuration list for PBXNativeTarget "TDDPracticeTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				77482F1E2881F51300082BEB /* Debug */,
+				77482F1F2881F51300082BEB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
