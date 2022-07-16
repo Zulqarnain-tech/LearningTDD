@@ -17,7 +17,7 @@ class MovieManagerTests: XCTestCase {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
     }
     
-    func test_init_MoviesToSee(){
+    func moviesToSeeAndSeen_ReturnsZero(){
         let (toSeeMoviesCount, seenMoviesCount) = moviesToSeeAndSeenSUT()
         XCTAssertEqual(toSeeMoviesCount, 0)
         XCTAssertEqual(seenMoviesCount, 0)
