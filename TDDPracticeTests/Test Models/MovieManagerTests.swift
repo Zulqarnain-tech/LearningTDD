@@ -8,9 +8,12 @@
 import XCTest
 import TDDPractice
 class MovieManagerTests: XCTestCase {
-
+    
+    var sut: MovieManager?
+    
     override func setUpWithError() throws {
         // Put setup code here. This method is called before the invocation of each test method in the class.
+        sut = MovieManager()
     }
 
     override func tearDownWithError() throws {
@@ -18,23 +21,24 @@ class MovieManagerTests: XCTestCase {
     }
     
     // Mark: - Check Initial Movie Count Values
-    func moviesToSeeAndSeen_ReturnsZero(){
+    func test_moviesToSeeAndSeen_ReturnsZero(){
         let (toSeeMoviesCount, seenMoviesCount) = moviesToSeeAndSeenSUT()
         XCTAssertEqual(toSeeMoviesCount, 0)
         XCTAssertEqual(seenMoviesCount, 0)
     }
-    private func moviesToSeeAndSeenSUT() -> (toSeeMoviesCount: Int, seenMoviesCount: Int){
-        let sut = MovieManager()
-        let toSeeMoviesCount = sut.movieToSeeCount
-        let seenMoviesCount = sut.movieSeenCount
+    private func moviesToSeeAndSeenSUT() -> (toSeeMoviesCount: Int?, seenMoviesCount: Int?){
+        let toSeeMoviesCount = sut?.movieToSeeCount
+        let seenMoviesCount = sut?.movieSeenCount
         return (toSeeMoviesCount, seenMoviesCount)
     }
     
     func test_addMovieToSee_ReturnsOne(){
         let testMovie = Movie(title: "Salt")
-        let sut = MovieManager()
-        sut.addMovie(movie: testMovie)
-        XCTAssertEqual(sut.movieToSeeCount, 1)
+        sut?.addMovie(movie: testMovie)
+        XCTAssertEqual(sut?.movieToSeeCount, 1)
+    }
+    func test_Query_ReturnsMovieAtIndex(){
+        
     }
 }
 
