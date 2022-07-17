@@ -10,7 +10,7 @@ import Foundation
 public final class MovieManager{
     
     // Mark: - Properties
-    private let moviesSeeCount: Int = 0
+    private var moviesSeeCount: Int = 0
     private let moviesSeenCount: Int = 0
     
     public init(){}
@@ -21,5 +21,9 @@ public final class MovieManager{
     
     public var movieSeenCount: Int{
         get{ self.moviesSeenCount}
+    }
+    
+    public func addMovie(movie: Movie){
+        self.moviesSeeCount += 1
     }
 }

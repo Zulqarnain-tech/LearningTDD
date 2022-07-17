@@ -17,6 +17,7 @@ class MovieManagerTests: XCTestCase {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
     }
     
+    // Mark: - Check Initial Movie Count Values
     func moviesToSeeAndSeen_ReturnsZero(){
         let (toSeeMoviesCount, seenMoviesCount) = moviesToSeeAndSeenSUT()
         XCTAssertEqual(toSeeMoviesCount, 0)
@@ -27,6 +28,13 @@ class MovieManagerTests: XCTestCase {
         let toSeeMoviesCount = sut.movieToSeeCount
         let seenMoviesCount = sut.movieSeenCount
         return (toSeeMoviesCount, seenMoviesCount)
+    }
+    
+    func test_addMovieToSee_ReturnsOne(){
+        let testMovie = Movie(title: "Salt")
+        let sut = MovieManager()
+        sut.addMovie(movie: testMovie)
+        XCTAssertEqual(sut.movieToSeeCount, 1)
     }
 }
 
