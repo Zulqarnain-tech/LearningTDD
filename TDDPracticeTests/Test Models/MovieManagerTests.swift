@@ -26,6 +26,7 @@ class MovieManagerTests: XCTestCase {
         XCTAssertEqual(toSeeMoviesCount, 0)
         XCTAssertEqual(seenMoviesCount, 0)
     }
+    
     private func moviesToSeeAndSeenSUT() -> (toSeeMoviesCount: Int?, seenMoviesCount: Int?){
         let toSeeMoviesCount = sut?.movieToSeeCount
         let seenMoviesCount = sut?.movieSeenCount
@@ -37,10 +38,17 @@ class MovieManagerTests: XCTestCase {
         sut?.addMovie(movie: testMovie)
         XCTAssertEqual(sut?.movieToSeeCount, 1)
     }
+    
     func test_Query_ReturnsMovieAtIndex(){
         let testMovie = Movie(title: "Grudge")
         sut?.addMovie(movie: testMovie)
         XCTAssertEqual(testMovie.getTitle, sut?.getMovieIndex(movieID: 0))
+    }
+    
+    func test_Equatable_MovieObjects(){
+        let movieOne = Movie(title: "Friends")
+        let movieTwo = Movie(title: "Friends")
+        XCTAssertEqual(movieOne, movieTwo)
     }
 }
 

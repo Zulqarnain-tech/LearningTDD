@@ -7,7 +7,7 @@
 
 import Foundation
 
-public struct Movie{
+public struct Movie: Equatable{
     
     // Mark: - Properties
     private let title: String
@@ -23,5 +23,15 @@ public struct Movie{
     public init(title: String, releaseDate: String? = nil){
         self.title = title
         self.releaseDate = releaseDate
+    }
+    
+    public static func==(lhs: Movie, rhs: Movie)-> Bool{
+        if lhs.getTitle != rhs.getTitle{
+            return false
+        }
+        if lhs.getReleaseDate != rhs.getReleaseDate{
+            return false
+        }
+        return true
     }
 }
