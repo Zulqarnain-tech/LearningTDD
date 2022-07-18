@@ -12,6 +12,7 @@ public final class MovieManager{
     // Mark: - Properties
     private var moviesSeeCount: Int = 0
     private let moviesSeenCount: Int = 0
+    private var moviesToSeeList: [Movie] = []
     
     public init(){}
     
@@ -25,5 +26,13 @@ public final class MovieManager{
     
     public func addMovie(movie: Movie){
         self.moviesSeeCount += 1
+        self.moviesToSeeList.append(movie)
+    }
+    
+    public func getMovieIndex(movieID index: Int)->String?{
+        if index <= moviesToSeeList.count - 1{
+            return self.moviesToSeeList[index].getTitle
+        }
+        return ""
     }
 }

@@ -38,7 +38,9 @@ class MovieManagerTests: XCTestCase {
         XCTAssertEqual(sut?.movieToSeeCount, 1)
     }
     func test_Query_ReturnsMovieAtIndex(){
-        
+        let testMovie = Movie(title: "Grudge")
+        sut?.addMovie(movie: testMovie)
+        XCTAssertEqual(testMovie.getTitle, sut?.getMovieIndex(movieID: 0))
     }
 }
 
