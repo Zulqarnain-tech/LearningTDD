@@ -50,5 +50,11 @@ class MovieManagerTests: XCTestCase {
         let movieTwo = Movie(title: "Friends")
         XCTAssertEqual(movieOne, movieTwo)
     }
+    
+    func test_clearMovieArrays(){
+        sut?.clearMovieDataLists()
+        XCTAssertEqual(sut?.movieSeenCount, 0)
+        XCTAssertEqual(sut?.movieToSeeCount, 0)
+    }
 }
 

@@ -11,8 +11,9 @@ public final class MovieManager{
     
     // Mark: - Properties
     private var moviesSeeCount: Int = 0
-    private let moviesSeenCount: Int = 0
+    private var moviesSeenCount: Int = 0
     private var moviesToSeeList: [Movie] = []
+    private var moviesToSeenList: [Movie] = []
     
     public init(){}
     
@@ -35,5 +36,16 @@ public final class MovieManager{
         }
         return ""
     }
+    public func checkOffMovieAtIndex(index: Int) {
+        guard index < moviesSeeCount else {return}
+        let checkedMovie = moviesToSeeList.remove(at: index)
+        moviesToSeenList.append(checkedMovie)
+    }
     
+    public func clearMovieDataLists(){
+        self.moviesToSeeList.removeAll()
+        self.moviesToSeenList.removeAll()
+        self.moviesSeeCount = 0
+        self.moviesSeenCount = 0
+    }
 }
