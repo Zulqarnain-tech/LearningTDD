@@ -10,23 +10,17 @@ import Foundation
 public final class MovieManager{
     
     // Mark: - Properties
-    private var moviesSeeCount: Int {return moviesToSeeList.count}
-    private var moviesSeenCount: Int {return moviesToSeenList.count}
+    public var moviesSeeCount: Int {return moviesToSeeList.count}
+    public var moviesSeenCount: Int {return moviesToSeenList.count}
     private var moviesToSeeList: [Movie] = []
     private var moviesToSeenList: [Movie] = []
     
     public init(){}
     
-    public var movieToSeeCount: Int{
-        get{ self.moviesSeeCount}
-    }
-    
-    public var movieSeenCount: Int{
-        get{ self.moviesSeenCount}
-    }
-    
     public func addMovie(movie: Movie){
-        self.moviesToSeeList.append(movie)
+        if !self.moviesToSeeList.contains(movie){
+            self.moviesToSeeList.append(movie)
+        }
     }
     
     public func getMovieIndex(movieID index: Int)->String?{

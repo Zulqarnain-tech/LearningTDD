@@ -10,6 +10,8 @@ import TDDPractice
 class MovieManagerTests: XCTestCase {
     
     var sut: MovieManager?
+    let testMovie = Movie(title: "Salt")
+    let testMovieTwo = Movie(title: "Grudge")
     
     override func setUpWithError() throws {
         // Put setup code here. This method is called before the invocation of each test method in the class.
@@ -28,21 +30,19 @@ class MovieManagerTests: XCTestCase {
     }
     
     private func moviesToSeeAndSeenSUT() -> (toSeeMoviesCount: Int?, seenMoviesCount: Int?){
-        let toSeeMoviesCount = sut?.movieToSeeCount
-        let seenMoviesCount = sut?.movieSeenCount
+        let toSeeMoviesCount = sut?.moviesSeeCount
+        let seenMoviesCount = sut?.moviesSeenCount
         return (toSeeMoviesCount, seenMoviesCount)
     }
     
     func test_addMovieToSee_ReturnsOne(){
-        let testMovie = Movie(title: "Salt")
         sut?.addMovie(movie: testMovie)
-        XCTAssertEqual(sut?.movieToSeeCount, 1)
+        XCTAssertEqual(sut?.moviesSeeCount, 1)
     }
     
     func test_Query_ReturnsMovieAtIndex(){
-        let testMovie = Movie(title: "Grudge")
-        sut?.addMovie(movie: testMovie)
-        XCTAssertEqual(testMovie.getTitle, sut?.getMovieIndex(movieID: 0))
+        sut?.addMovie(movie: testMovieTwo)
+        XCTAssertEqual(testMovieTwo.getTitle, sut?.getMovieIndex(movieID: 0))
     }
     
     func test_Equatable_MovieObjects(){
@@ -53,8 +53,14 @@ class MovieManagerTests: XCTestCase {
     
     func test_clearMovieArrays(){
         sut?.clearMovieDataLists()
-        XCTAssertEqual(sut?.movieSeenCount, 0)
-        XCTAssertEqual(sut?.movieToSeeCount, 0)
+        XCTAssertEqual(sut?.moviesSeeCount, 0)
+        XCTAssertEqual(sut?.moviesSeenCount, 0)
+    }
+    
+    func test_checkNoDuplicateMovieIsAdded(){
+        sut?.addMovie(movie: testMovie)
+        sut?.addMovie(movie: testMovie)
+        XCTAssertEqual(sut?.moviesSeeCount, 1)
     }
 }
 
