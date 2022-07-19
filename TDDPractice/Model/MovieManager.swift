@@ -10,8 +10,8 @@ import Foundation
 public final class MovieManager{
     
     // Mark: - Properties
-    private var moviesSeeCount: Int = 0
-    private var moviesSeenCount: Int = 0
+    private var moviesSeeCount: Int {return moviesToSeeList.count}
+    private var moviesSeenCount: Int {return moviesToSeenList.count}
     private var moviesToSeeList: [Movie] = []
     private var moviesToSeenList: [Movie] = []
     
@@ -26,7 +26,6 @@ public final class MovieManager{
     }
     
     public func addMovie(movie: Movie){
-        self.moviesSeeCount += 1
         self.moviesToSeeList.append(movie)
     }
     
@@ -45,7 +44,5 @@ public final class MovieManager{
     public func clearMovieDataLists(){
         self.moviesToSeeList.removeAll()
         self.moviesToSeenList.removeAll()
-        self.moviesSeeCount = 0
-        self.moviesSeenCount = 0
     }
 }
