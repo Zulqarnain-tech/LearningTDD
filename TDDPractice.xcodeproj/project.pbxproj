@@ -17,6 +17,7 @@
 		77482F22288296A500082BEB /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77482F21288296A500082BEB /* Movie.swift */; };
 		77A82E672882EBAD0053B39D /* MovieManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77A82E662882EBAD0053B39D /* MovieManagerTests.swift */; };
 		77A82E692882F1E40053B39D /* MovieManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77A82E682882F1E40053B39D /* MovieManager.swift */; };
+		77ABF08C2889D0D9007272E9 /* MovieLibraryDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77ABF08B2889D0D9007272E9 /* MovieLibraryDataService.swift */; };
 		77D14F3F2888689C008C3B51 /* LibraryViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77D14F3E2888689C008C3B51 /* LibraryViewControllerTests.swift */; };
 /* End PBXBuildFile section */
 
@@ -44,6 +45,7 @@
 		77482F21288296A500082BEB /* Movie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
 		77A82E662882EBAD0053B39D /* MovieManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieManagerTests.swift; sourceTree = "<group>"; };
 		77A82E682882F1E40053B39D /* MovieManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieManager.swift; sourceTree = "<group>"; };
+		77ABF08B2889D0D9007272E9 /* MovieLibraryDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieLibraryDataService.swift; sourceTree = "<group>"; };
 		77D14F3E2888689C008C3B51 /* LibraryViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryViewControllerTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -86,6 +88,7 @@
 		77482EFE2881ED4500082BEB /* TDDPractice */ = {
 			isa = PBXGroup;
 			children = (
+				77ABF08D2889D0F7007272E9 /* Data Service */,
 				77482F2328829E4700082BEB /* Controller */,
 				77482F202882969B00082BEB /* Model */,
 				77482EFF2881ED4500082BEB /* AppDelegate.swift */,
@@ -139,6 +142,14 @@
 			children = (
 			);
 			path = "Test Controllers";
+			sourceTree = "<group>";
+		};
+		77ABF08D2889D0F7007272E9 /* Data Service */ = {
+			isa = PBXGroup;
+			children = (
+				77ABF08B2889D0D9007272E9 /* MovieLibraryDataService.swift */,
+			);
+			path = "Data Service";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -244,6 +255,7 @@
 			files = (
 				77482F042881ED4500082BEB /* LibraryViewController.swift in Sources */,
 				77482F002881ED4500082BEB /* AppDelegate.swift in Sources */,
+				77ABF08C2889D0D9007272E9 /* MovieLibraryDataService.swift in Sources */,
 				77A82E692882F1E40053B39D /* MovieManager.swift in Sources */,
 				77482F22288296A500082BEB /* Movie.swift in Sources */,
 				77482F022881ED4500082BEB /* SceneDelegate.swift in Sources */,

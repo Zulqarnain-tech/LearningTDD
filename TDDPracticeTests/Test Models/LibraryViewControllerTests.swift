@@ -23,5 +23,14 @@ class LibraryViewControllerTests: XCTestCase {
     func test_LibraryVCTableViewNotNil(){
         XCTAssertNotNil(sut?.tableView)
     }
-
+    
+    func test_DataSource_setsTableViewDataSource(){
+        XCTAssertNotNil(sut?.tableView.dataSource)
+        XCTAssertTrue(sut?.tableView.dataSource is MovieLibraryDataService)
+    }
+    
+    func test_Delegate_setsTableViewDelegate(){
+        XCTAssertNotNil(sut?.tableView.delegate)
+        XCTAssertTrue(sut?.tableView.delegate is MovieLibraryDataService)
+    }
 }
