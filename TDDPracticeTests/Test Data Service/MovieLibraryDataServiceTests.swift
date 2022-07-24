@@ -42,4 +42,14 @@ class MovieLibraryDataServiceTests: XCTestCase {
         
         XCTAssertEqual(tableView?.numberOfRows(inSection: 0), 3)
     }
+    func test_TableViewSectionTwo_ReturnsMoviesSeenCount(){
+        sut?.movieManager?.addMovie(movie: horror)
+        sut?.movieManager?.addMovie(movie: comedy)
+        sut?.movieManager?.checkOffMovieAtIndex(index: 0)
+        XCTAssertEqual(tableView?.numberOfRows(inSection: 1), 1)
+        
+        sut?.movieManager?.checkOffMovieAtIndex(index: 0)
+        tableView?.reloadData()
+        XCTAssertEqual(tableView?.numberOfRows(inSection: 1), 2)
+    }
 }
