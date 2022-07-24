@@ -7,14 +7,23 @@
 
 import Foundation
 import UIKit
-class MovieLibraryDataService: NSObject,UITableViewDataSource,UITableViewDelegate{
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        0
+public class MovieLibraryDataService: NSObject,UITableViewDataSource,UITableViewDelegate{
+    
+    public var movieManager: MovieManager?
+    
+    
+    public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        guard let movieManageer = movieManager else{
+            return 0
+        }
+        return movieManageer.moviesSeeCount
     }
     
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         return UITableViewCell()
     }
     
-    
+    public func numberOfSections(in tableView: UITableView) -> Int {
+        2
+    }
 }
