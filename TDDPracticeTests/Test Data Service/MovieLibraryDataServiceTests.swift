@@ -52,4 +52,32 @@ class MovieLibraryDataServiceTests: XCTestCase {
         tableView?.reloadData()
         XCTAssertEqual(tableView?.numberOfRows(inSection: 1), 2)
     }
+    
+    // Mark: - Cells
+    func test_Cell_RowAtIndex_ReturnsMovieCell(){
+        sut?.movieManager?.addMovie(movie: comedy)
+        tableView?.reloadData()
+        let cellQueried = tableView?.cellForRow(at: IndexPath(row: 0, section: 0))
+        XCTAssertTrue(cellQueried is MovieCell)
+    }
+    
+    func test_Cell_ShoyldDequeueCell(){
+        let mock = TableViewMock()
+        mock.dataSource = sut
+        mock.register(MovieCell.self, forCellReuseIdentifier: "movieCellID")
+        sut?.movieManager?.addMovie(movie: horror)
+        mock.reloadData()
+        _ = mock.cellForRow(at: IndexPath(row: 0, section: 0))
+        XCTAssertTrue(mock.cellDequeuedProperly)
+    }
+}
+
+extension MovieLibraryDataServiceTests{
+    class TableViewMock: UITableView{
+        var cellDequeuedProperly = false
+        override func dequeueReusableCell(withIdentifier identifier: String, for indexPath: IndexPath) -> UITableViewCell {
+            self.cellDequeuedProperly = true
+            return super.dequeueReusableCell(withIdentifier: identifier, for: indexPath)
+        }
+    }
 }

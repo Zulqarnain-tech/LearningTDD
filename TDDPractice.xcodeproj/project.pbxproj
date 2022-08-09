@@ -20,6 +20,7 @@
 		77ABF08C2889D0D9007272E9 /* MovieLibraryDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77ABF08B2889D0D9007272E9 /* MovieLibraryDataService.swift */; };
 		77BF5607288D819C009A4282 /* MovieLibraryDataServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77BF5606288D819C009A4282 /* MovieLibraryDataServiceTests.swift */; };
 		77D14F3F2888689C008C3B51 /* LibraryViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77D14F3E2888689C008C3B51 /* LibraryViewControllerTests.swift */; };
+		77FB270428A2A00D00082A02 /* MovieCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77FB270328A2A00D00082A02 /* MovieCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		77ABF08B2889D0D9007272E9 /* MovieLibraryDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieLibraryDataService.swift; sourceTree = "<group>"; };
 		77BF5606288D819C009A4282 /* MovieLibraryDataServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieLibraryDataServiceTests.swift; sourceTree = "<group>"; };
 		77D14F3E2888689C008C3B51 /* LibraryViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryViewControllerTests.swift; sourceTree = "<group>"; };
+		77FB270328A2A00D00082A02 /* MovieCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,6 +92,7 @@
 		77482EFE2881ED4500082BEB /* TDDPractice */ = {
 			isa = PBXGroup;
 			children = (
+				77FB270228A29FF200082A02 /* Views */,
 				77ABF08D2889D0F7007272E9 /* Data Service */,
 				77482F2328829E4700082BEB /* Controller */,
 				77482F202882969B00082BEB /* Model */,
@@ -161,6 +164,14 @@
 				77BF5606288D819C009A4282 /* MovieLibraryDataServiceTests.swift */,
 			);
 			path = "Test Data Service";
+			sourceTree = "<group>";
+		};
+		77FB270228A29FF200082A02 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				77FB270328A2A00D00082A02 /* MovieCell.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -264,6 +275,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				77FB270428A2A00D00082A02 /* MovieCell.swift in Sources */,
 				77482F042881ED4500082BEB /* LibraryViewController.swift in Sources */,
 				77482F002881ED4500082BEB /* AppDelegate.swift in Sources */,
 				77ABF08C2889D0D9007272E9 /* MovieLibraryDataService.swift in Sources */,
