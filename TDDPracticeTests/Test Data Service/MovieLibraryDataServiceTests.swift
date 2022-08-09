@@ -6,22 +6,30 @@
 //
 
 import XCTest
-import TDDPractice
+@testable import TDDPractice
+
 class MovieLibraryDataServiceTests: XCTestCase {
     
     var sut: MovieLibraryDataService?
     var tableView: UITableView?
+    var libraryVC: LibraryViewController?
     
     let horror = Movie(title: "Friend Request", releaseDate: "2016")
     let comedy = Movie(title: "Let's Be Cops", releaseDate: nil)
     let action = Movie(title: "JarHeads")
     override func setUpWithError() throws {
         // Put setup code here. This method is called before the invocation of each test method in the class.
+        
+        libraryVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "LibraryViewControllerID") as? LibraryViewController
+        _ = libraryVC?.view
+        
         sut = MovieLibraryDataService()
         sut?.movieManager = MovieManager()
-        tableView = UITableView()
+        
+        self.tableView = libraryVC?.tableView
         tableView?.dataSource = sut
         tableView?.delegate = sut
+        
     }
 
     override func tearDownWithError() throws {
