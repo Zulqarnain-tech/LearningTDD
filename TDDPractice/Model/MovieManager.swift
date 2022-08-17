@@ -23,11 +23,14 @@ public final class MovieManager{
         }
     }
     
-    public func getMovieIndex(movieID index: Int)->String?{
-        if index <= moviesToSeeList.count - 1{
-            return self.moviesToSeeList[index].getTitle
+    public func getMovieIndex(movieID index: Int)->Movie?{
+            return self.moviesToSeeList[index]
+    }
+    public func checkedOffMovieAtIndex(movieID index: Int)->Movie?{
+        if index <= moviesToSeenList.count - 1{
+            return self.moviesToSeenList[index]
         }
-        return ""
+        return nil
     }
     public func checkOffMovieAtIndex(index: Int) {
         guard index < moviesSeeCount else {return}

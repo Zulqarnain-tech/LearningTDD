@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7746D32828A80A0A00CA7524 /* MockExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7746D32728A80A0A00CA7524 /* MockExtensions.swift */; };
 		77482F002881ED4500082BEB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77482EFF2881ED4500082BEB /* AppDelegate.swift */; };
 		77482F022881ED4500082BEB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77482F012881ED4500082BEB /* SceneDelegate.swift */; };
 		77482F042881ED4500082BEB /* LibraryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77482F032881ED4500082BEB /* LibraryViewController.swift */; };
@@ -34,6 +35,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		7746D32728A80A0A00CA7524 /* MockExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockExtensions.swift; sourceTree = "<group>"; };
 		77482EFC2881ED4500082BEB /* TDDPractice.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TDDPractice.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		77482EFF2881ED4500082BEB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		77482F012881ED4500082BEB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -71,6 +73,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7746D32628A8099500CA7524 /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				7746D32728A80A0A00CA7524 /* MockExtensions.swift */,
+			);
+			path = Mocks;
+			sourceTree = "<group>";
+		};
 		77482EF32881ED4500082BEB = {
 			isa = PBXGroup;
 			children = (
@@ -109,6 +119,7 @@
 		77482F182881F51300082BEB /* TDDPracticeTests */ = {
 			isa = PBXGroup;
 			children = (
+				7746D32628A8099500CA7524 /* Mocks */,
 				77BF5605288D815D009A4282 /* Test Data Service */,
 				77482F252882A6D600082BEB /* Test Controllers */,
 				77482F242882A2B900082BEB /* Test Models */,
@@ -292,6 +303,7 @@
 				77BF5607288D819C009A4282 /* MovieLibraryDataServiceTests.swift in Sources */,
 				77A82E672882EBAD0053B39D /* MovieManagerTests.swift in Sources */,
 				77482F1A2881F51300082BEB /* MovieStructTests.swift in Sources */,
+				7746D32828A80A0A00CA7524 /* MockExtensions.swift in Sources */,
 				77D14F3F2888689C008C3B51 /* LibraryViewControllerTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -8,4 +8,8 @@
 import UIKit
 
 public class MovieCell: UITableViewCell {
+    
+    public func configMovieCell(movieData: Movie){
+        
+    }
 }

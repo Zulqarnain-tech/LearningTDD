@@ -42,7 +42,7 @@ class MovieManagerTests: XCTestCase {
     
     func test_Query_ReturnsMovieAtIndex(){
         sut?.addMovie(movie: testMovieTwo)
-        XCTAssertEqual(testMovieTwo.getTitle, sut?.getMovieIndex(movieID: 0))
+        XCTAssertEqual(testMovieTwo.getTitle, sut?.getMovieIndex(movieID: 0)?.getTitle)
     }
     
     func test_Equatable_MovieObjects(){

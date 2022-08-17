@@ -23,6 +23,11 @@ public class MovieLibraryDataService: NSObject,UITableViewDataSource,UITableView
     
     public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "movieCellID", for: indexPath)
+        as! MovieCell
+        guard let movieManager = movieManager else {fatalError()}
+        guard let librarySection = LibrarySection(rawValue: indexPath.section) else {fatalError()}
+        let movieData = (librarySection.rawValue == 0 ? movieManager.getMovieIndex(movieID: indexPath.row) : movieManager.checkedOffMovieAtIndex(movieID: indexPath.row))!
+        cell.configMovieCell(movieData: movieData)
         return cell
     }
     
